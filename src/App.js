@@ -6,12 +6,13 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { styled } from "@mui/material/styles";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import HomePage from "./Pages/Home";
+import Navbar from './Components/Navbar';
 
 
 const theme = createTheme({
     palette: {
         primary: {
-            main: "#273746", // สีหลัก
+            main: "#F4D03F", // สีหลัก
         },
         secondary: {
             main: "#b5bac1", // สีรอง
@@ -38,6 +39,7 @@ function App() {
             style={{ fontFamily: "Kanit, sans-serif" }}
         >
             <ThemeProvider theme={theme}>
+            <Navbar />
                 <Router>
                     <Routes>
                         <Route path="/" element={<HomePage />} />
